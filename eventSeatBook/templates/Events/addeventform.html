@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {background-color: powderblue;}
+		
+	</style>
+	<title>add event</title>
+</head>
+<body>
+	<h1>ADD EVENT</h1>
+	<form method='POST'>
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value='Save' />
+</form>
+
+</body>
+</html>

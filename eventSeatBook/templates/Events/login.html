@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background-color: Grey;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+<h2>Admin Login Form</h2>
+
+
+
+
+<form action="{% url 'login' %}" method="POST">
+    {% csrf_token %}
+    <input id="key" type="text" name="username" value="" placeholder="Username" required><br><br>
+    <input id="value" type="password" name="password" value="" placeholder="Password" required><br><br>
+    <input type="submit" value="Login" />
+</form>
+</body>
+</html>
+
+
+
+
+
+

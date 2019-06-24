@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background-image: linear-gradient(54deg, #9164FF , #8BFFF4);
+		}
+
+		div.a{
+			text-align: left;
+			
+			height: 100px;
+			width: 100 %;
+			font-size: 50px;
+		}
+		div.b{
+			text-align: left;
+			background-color:#FF9999;
+			font-size: 25px;
+		}
+		div.c{
+			padding:  20px;
+			text-align: left;
+			background-color:#FFFF99;
+			font-size: 20px;
+		}
+	</style>
+	<title>admin</title>
+</head>
+<body>
+	<header style="font-size: 20px"><a href="{% url 'login'  %}">Logout</a></header>
+	<div class = 'a'>
+		<h1 style="background-color:PowderBlue;">Admin</h1>
+	</div>
+	<div class = 'b'><h2>Events</h2></div>
+	<div class= "c">
+	{% for eve in events %}
+	<a href="{% url 'delete' eve.id %}">{{eve.name}}</a><br><br>
+	{%endfor%}
+	</div>
+	<p>Click here to add Event <a href="{% url 'addevent'%}"><Button>Add Event</Button> </a></p>
+	<h2>Students</h2>
+	{%for br in brchoice%}
+	<a href="{% url 'stdlist' br %}"><Button> {{br}}</Button> </a>
+	{%endfor%}
+<br></br>
+	{%for yr in yrchoice%}
+	<a href="{% url 'stdlist2' yr %}"><Button> {{yr}}</Button> </a>
+	{%endfor%}
+</body>
+</html>

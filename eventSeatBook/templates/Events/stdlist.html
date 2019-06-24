@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background-color: #EEE;
+			font-family: sans-serif;
+			font-size: 1.2rem;
+		}
+
+		div.a{
+			padding:  2px;
+			text-align: left;
+			background-color:PowderBlue;
+			height: 100px;
+			width: 100 %;
+			font-size: 20px;
+		}
+		div.b{
+			padding:  2px;
+			text-align: left;
+			background-color:#FFFF99;
+			font-size: 20px;
+		}
+	</style>
+	<title>stdlist</title>
+</head>
+<body>
+<div class = 'a'><h1>students</h1></div>
+<div class = 'b'>
+	<ol>
+	{% for eve in object_list %}
+	
+	<li>{{eve.student_name}}</li><br>
+
+	{%endfor%}
+	</ol>
+</div>
+
+
+</body>
+</html>

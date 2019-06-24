@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		body{
+			background-image: linear-gradient(54deg, #9164FF , #8BFFF4);
+		}
+		div.a{
+			text-align: center;
+			background-color:#FF6699;
+			height: 100px;
+			width: 100 %;
+			font-size: 50px;
+		}
+		div.b{
+			text-align: center;
+			background-color:#FF9999;
+			font-size: 25px;
+		}
+		div.c{
+			padding:  20px;
+			text-align: center;
+			background-color:#FFFF99;
+			font-size: 20px;
+		}
+		}
+	</style>
+    <meta charset="UTF-8">
+    <title>Seat booking</title>
+</head>
+<body>
+	<header style="font-size: 30px"><a href="{% url 'login'  %}">admin</a></header>
+	<div class = "a">
+	<h1 style="background-color:PowderBlue;">V.C.E.T.</h1>
+	</div>
+	<br></br>
+	<div class = "b">
+	<h2>EVENTS</h2>
+	</div>
+	<div class= "c">
+	{% for al in alb %}
+	<a href="{% url 'dete' al.id %}">{{al.name}}</a><br><br>
+	{%endfor%}
+	</div>
+</body>
+</html>
